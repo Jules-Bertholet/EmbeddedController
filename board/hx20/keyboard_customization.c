@@ -384,6 +384,14 @@ int hotkey_special_key(uint16_t *key_code, int8_t pressed)
 		/*if (!fn_table_set(pressed, KB_FN_S))*/
 
 		break;
+	case 0x001A:  /* Z -> 102ND */
+		if (fn_table_set(pressed, KB_FN_Z))
+			*key_code = 0x0061;
+		break;
+	case 0x004A:  /* ? -> RO KANA */
+		if (fn_table_set(pressed, KB_FN_QUESTIONMARK))
+			*key_code = 0x0051;
+		break;
 	case SCANCODE_LEFT:  /* HOME */
 		if (fn_table_set(pressed, KB_FN_LEFT))
 			*key_code = 0xe06c;
