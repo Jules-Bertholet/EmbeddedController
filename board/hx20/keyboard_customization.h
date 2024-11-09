@@ -98,6 +98,7 @@ enum kb_fn_table {
 	KB_FN_SPACE = BIT(22),
 	KB_FN_Z = BIT(25),
 	KB_FN_QUESTIONMARK = BIT(26),
+	KB_FN_EQUALS = BIT(27),
 };
 
 #ifdef CONFIG_KEYBOARD_BACKLIGHT

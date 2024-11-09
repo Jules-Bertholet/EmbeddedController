@@ -376,6 +376,10 @@ int hotkey_special_key(uint16_t *key_code, int8_t pressed)
 		if (fn_table_set(pressed, KB_FN_DELETE))
 			*key_code = 0xe070;
 		break;
+	case 0x0055:  /* = -> YEN */
+		if (fn_table_set(pressed, KB_FN_EQUALS))
+			*key_code = 0x006A;
+		break;
 	case SCANCODE_K:  /* TODO: SCROLL_LOCK */
 		if (fn_table_set(pressed, KB_FN_K))
 			*key_code = SCANCODE_SCROLL_LOCK;
