@@ -392,6 +392,18 @@ int hotkey_special_key(uint16_t *key_code, int8_t pressed)
 		if (fn_table_set(pressed, KB_FN_Z))
 			*key_code = 0x0061;
 		break;
+	case 0x0021:  /* C -> MUHENKAN */
+		if (fn_table_set(pressed, KB_FN_C))
+			*key_code = 0x0067;
+		break;
+	case 0x003A:  /* M -> HENKAN */
+		if (fn_table_set(pressed, KB_FN_M))
+			*key_code = 0x0064;
+		break;
+	case 0x0041:  /* , -> KATAKANA HIRAGANA */
+		if (fn_table_set(pressed, KB_FN_COMMA))
+			*key_code = 0x0013;
+		break;
 	case 0x004A:  /* ? -> RO KANA */
 		if (fn_table_set(pressed, KB_FN_QUESTIONMARK))
 			*key_code = 0x0051;
